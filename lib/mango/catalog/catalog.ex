@@ -11,4 +11,9 @@ defmodule Mango.Catalog do
     list_products()
     |> Enum.filter( &(&1.is_seasonal == true) )
   end
+
+  def get_category_products(name) do
+    list_products()
+    |> Enum.filter( &(&1.category == name) )
+  end
 end
